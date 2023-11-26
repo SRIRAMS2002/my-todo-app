@@ -1,7 +1,7 @@
 import React from "react";
 
 const TodoItem = ({ task, handleDelete }) => {
-  if (!task || !task.title) {
+  if (!task || typeof task.title && task.description === 'undefined') {
     return (
       <div className="flex items-center justify-between p-2 border-b">
         <p className="text-red-500">Invalid Task</p>
