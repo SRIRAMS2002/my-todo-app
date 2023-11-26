@@ -1,8 +1,20 @@
 import React from 'react';
 
-const TodoItem = ({ task, handleDelete }) => {
-    console.log('Task:', task);
+
+
+
+
+
+
+
+
+    const TodoItem = ({ task, handleDelete }) => {
+        if (!task || !task.title) {
+          return null; // Or display an error message
+        }
   return (
+    
+        
     <div className="flex items-center justify-between p-2 border-b">
        
       <div>
@@ -13,8 +25,10 @@ const TodoItem = ({ task, handleDelete }) => {
         Delete
       </button>
     </div>
-    
-  );
-};
+ 
+  )
+}
 
-export default TodoItem;
+export default TodoItem
+
+
