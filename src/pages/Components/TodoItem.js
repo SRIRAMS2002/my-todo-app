@@ -1,8 +1,10 @@
 import React from 'react';
 
 const TodoItem = ({ task, handleDelete }) => {
+    console.log('Task:', task);
   return (
     <div className="flex items-center justify-between p-2 border-b">
+       
       <div>
         <p className="font-medium">{task.title}</p>
         <p className="text-sm text-gray-500">{task.description}</p>
@@ -11,6 +13,7 @@ const TodoItem = ({ task, handleDelete }) => {
         Delete
       </button>
     </div>
+    
   );
 };
 
